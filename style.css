@@ -1,0 +1,120 @@
+/*
+$backcolor: orange;
+$nombre-anneaux: 6;
+$taille-base: 20px;
+$ecart-entre-anneaux: 5px;
+$couleur-anneau: blue;
+
+body {
+    background-color: $backcolor;
+}
+
+@mixin Ring($hw, $c) {
+    height: $hw;
+    width: $hw;
+    border-radius: 50%;
+    background-color: $backcolor;
+    border: $hw / 10 solid $c;
+    box-shadow: 0 0 10px $c, $hw / 10 $hw / 10 10px $c;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+}
+
+@for $i from 1 through $nombre-anneaux {
+    $taille-anneau: $taille-base + ($i - 1) * $ecart-entre-anneaux;
+    $couleur-anneau: darken(#3498db, $i * 5%);
+
+    .ring#{$i} {
+        @include Ring($taille-anneau, $couleur-anneau);
+        left: $i * ($taille-anneau + $ecart-entre-anneaux);
+    }
+}
+*/
+body {
+    background-color: orange;
+}
+
+.ring1 {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: orange;
+    border: 2px solid #258cd1;
+    box-shadow: 0 0 10px #258cd1, 2px 2px 10px #258cd1;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    left: 25px;
+    z-index: 5;
+}
+
+.ring2 {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: orange;
+    border: 2.5px solid #217dbb;
+    box-shadow: 0 0 10px #217dbb, 2.5px 2.5px 10px #217dbb;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    left: 60px;
+    z-index: 4;
+}
+
+.ring3 {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: orange;
+    border: 3px solid #1d6fa5;
+    box-shadow: 0 0 10px #1d6fa5, 3px 3px 10px #1d6fa5;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    left: 105px;
+    z-index: 3;
+}
+
+.ring4 {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: orange;
+    border: 3.5px solid #196090;
+    box-shadow: 0 0 10px #196090, 3.5px 3.5px 10px #196090;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    left: 160px;
+    z-index: 2;
+}
+
+.ring5 {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: orange;
+    border: 4px solid #16527a;
+    box-shadow: 0 0 10px #16527a, 4px 4px 10px #16527a;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    left: 225px;
+    z-index: 1;
+}
+
+.ring6 {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: orange;
+    border: 4.5px solid #124364;
+    box-shadow: 0 0 10px #124364, 4.5px 4.5px 10px #124364;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    left: 300px;
+    z-index: 0;
+}
