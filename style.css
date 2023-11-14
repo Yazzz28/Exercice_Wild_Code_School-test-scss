@@ -1,36 +1,4 @@
-/*
-$backcolor: orange;
-$nombre-anneaux: 6;
-$taille-base: 20px;
-$ecart-entre-anneaux: 5px;
-$couleur-anneau: blue;
 
-body {
-    background-color: $backcolor;
-}
-
-@mixin Ring($hw, $c) {
-    height: $hw;
-    width: $hw;
-    border-radius: 50%;
-    background-color: $backcolor;
-    border: $hw / 10 solid $c;
-    box-shadow: 0 0 10px $c, $hw / 10 $hw / 10 10px $c;
-    position: absolute;
-    top: 50%;
-    transform: translateX(-50%);
-}
-
-@for $i from 1 through $nombre-anneaux {
-    $taille-anneau: $taille-base + ($i - 1) * $ecart-entre-anneaux;
-    $couleur-anneau: darken(#3498db, $i * 5%);
-
-    .ring#{$i} {
-        @include Ring($taille-anneau, $couleur-anneau);
-        left: $i * ($taille-anneau + $ecart-entre-anneaux);
-    }
-}
-*/
 body {
     background-color: orange;
 }
